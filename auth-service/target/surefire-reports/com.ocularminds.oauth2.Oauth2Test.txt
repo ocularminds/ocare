@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ocularminds.oauth2.Oauth2Test
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.855 sec - in com.ocularminds.oauth2.Oauth2Test
