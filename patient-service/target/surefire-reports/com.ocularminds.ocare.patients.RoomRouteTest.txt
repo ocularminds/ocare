@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.ocularminds.ocare.patients.RoomRouteTest
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.73 sec - in com.ocularminds.ocare.patients.RoomRouteTest
