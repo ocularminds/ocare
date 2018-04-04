@@ -7,10 +7,10 @@
     <packaging>pom</packaging>
     <description>Microservice for the medical software solution</description> 
     <modules>
-        <module>auth-service</module>
-        <module>account-service</module>
-        <module>patient-service</module>
-        <module>queue-service</module>
-        <module>bill-service</module>
+        <module>ocare-patient</module>
+        <module>ocare-auth</module>
+        <module>ocare-queue</module>
+        <module>ocare-account</module>
+        <module>ocare-bills</module>
     </modules>	
 </project>

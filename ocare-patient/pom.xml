@@ -4,8 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ocularminds.ocare</groupId>
-    <artifactId>patient-service</artifactId>
+    <artifactId>ocare-patient</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -212,7 +213,7 @@
         </resources>
     </build>
     <properties>
-         <java.version>1.8</java.version>
+        <java.version>1.8</java.version>
         <start-class>com.ocularminds.ocare.patients.App</start-class>
         <!-- Required for Spring rest docs -->
         <snippetsDirectory>${project.build.directory}/generated-ascii-doc</snippetsDirectory>
@@ -224,4 +225,5 @@
         <asciidoc.html.out.dir>${base.generated.docs.dir}/html</asciidoc.html.out.dir>
         <asciidoc.pdf.out.dir>${base.generated.docs.dir}/pdf</asciidoc.pdf.out.dir>
     </properties>
+    <name>ocare-patient</name>
 </project>

@@ -31,15 +31,15 @@ public class QueueProcessor {
      */
     private final Queue<OutPatient> patients;
 
-    /** ArrayList used to store visits after they finish in the store.  
-    * Note: that it is not really necessary to do this in order to obtain our results. 
+    /** ArrayList used to store visits after they finish in the store.
+    * Note: that it is not really necessary to do this in order to obtain our results.
     * Cumulative stats as the visits exit could be kept and output of each
     * patient's data could be saved to database (ex: to a file) as he/she exits as well.
-    * 
-    * However, putting them into an ArrayList allows us to deal with them all in a 
-    * nice way after the simulation has completed.  If we are dealing with 
-    * a very large number of visits (ex: simulation is run to model many 
-    * days of execution in a very large store) then storing the visits 
+    *
+    * However, putting them into an ArrayList allows us to deal with them all in a
+    * nice way after the simulation has completed.  If we are dealing with
+    * a very large number of visits (ex: simulation is run to model many
+    * days of execution in a very large store) then storing the visits
     * in this way would not be feasible.
     */
     private final ArrayList<OutPatient> visits;
@@ -67,7 +67,7 @@ public class QueueProcessor {
         started = System.currentTimeMillis();
     }
 
-    //add to queue based on number of Processors[Doctors]    
+    //add to queue based on number of Processors[Doctors]
     public long add(long clock) {
         long id = serialNumber.incrementAndGet();
         long time = System.currentTimeMillis() - started;
@@ -90,6 +90,10 @@ public class QueueProcessor {
         return id;
     }
 
+    /**
+    * Ensure next patient is notified of the completes of consultationn
+    * with current patient
+    */
     public void complete(long clock) {
         currentPatient = consultant.removePatient();
         currentPatient.setEndServiceTime(clock);
@@ -196,7 +200,7 @@ public class QueueProcessor {
      * The methods here uses distributions that changes the inter-arrival
      * distribution to exponential and it changes the service distribution to
      * normal. Method to provide the inter-arrival time distribution
-     * @return 
+     * @return
      */
     public int deltaCustomer() {
         return (r.nextInt(9999) + 1000);
